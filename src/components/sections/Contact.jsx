@@ -39,7 +39,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bp-panel bp-grid-dark bg-ink w-full py-24 md:py-32 px-6 md:px-12 relative overflow-hidden scroll-mt-20"
+      className="bp-panel bp-grid-dark bg-ink w-full py-24 md:py-32 px-6 md:px-12 relative scroll-mt-20"
     >
       <Crosshair position="tl" className="text-paper/30" />
       <Crosshair position="tr" className="text-paper/30" />
@@ -108,7 +108,7 @@ export default function Contact() {
             <a
               href={RESUME_PATH}
               download="Kishorekumar-R-Resume.pdf"
-              className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-orange text-ink font-semibold uppercase tracking-wide text-sm hover:bg-paper transition-all duration-300 w-fit"
+              className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-orange text-ink font-body font-semibold uppercase tracking-wide text-sm hover:bg-paper transition-all duration-300 w-fit"
             >
               <DownloadIcon className="w-4 h-4" />
               Download Résumé

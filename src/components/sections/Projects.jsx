@@ -18,7 +18,7 @@ function ProjectCard({ project, index }) {
       data-aos-delay={index * 100}
       className="bp-panel border border-ink/15 bg-paper relative flex flex-col h-full"
     >
-      <div className="absolute -top-3 left-4 bp-readout text-[9px] uppercase px-2 py-0.5 bg-orange text-ink border border-ink/20">
+      <div className="absolute -top-3 left-4 bp-readout text-[9px] uppercase px-2 py-0.5 bg-orange text-ink border border-ink/20 z-10">
         {project.status}
       </div>
 
@@ -90,7 +90,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="bp-panel bp-grid bg-paper pt-24 pb-28 px-6 md:px-12 w-full relative overflow-hidden font-sans scroll-mt-20 border-b border-ink/10"
+      className="bp-panel bp-grid bg-paper pt-24 pb-28 px-6 md:px-12 w-full relative font-sans scroll-mt-20 border-b border-ink/10"
     >
       <Crosshair position="tl" className="text-ink/30" />
       <Crosshair position="tr" className="text-ink/30" />

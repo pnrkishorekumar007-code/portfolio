@@ -56,7 +56,7 @@ export default function Services() {
     <section
       id="services"
       ref={containerRef}
-      className="bp-panel bp-grid bg-paper pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans scroll-mt-20 border-b border-ink/10"
+      className="bp-panel bp-grid bg-paper pt-24 pb-32 px-6 md:px-12 w-full relative font-sans scroll-mt-20 border-b border-ink/10"
     >
       <Crosshair position="tl" className="text-ink/30" />
       <Crosshair position="tr" className="text-ink/30" />

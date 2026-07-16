@@ -61,7 +61,7 @@ export default function Navbar() {
           <a
             href={RESUME_PATH}
             download="Kishorekumar-R-Resume.pdf"
-            className={`bp-readout px-5 py-2 border text-xs uppercase tracking-[0.15em] transition-all duration-300 flex items-center gap-2 ${
+            className={`px-5 py-2 border text-xs uppercase font-body font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 ${
               isLight
                 ? 'border-paper/40 text-paper/80 hover:border-paper hover:text-paper'
                 : 'border-ink/30 text-ink/70 hover:border-ink hover:text-ink'
@@ -124,7 +124,7 @@ export default function Navbar() {
               href={RESUME_PATH}
               download="Kishorekumar-R-Resume.pdf"
               onClick={closeMenu}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-paper/40 text-paper font-semibold hover:border-paper transition-colors w-full text-center"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-paper/40 text-paper font-body font-semibold hover:border-paper transition-colors w-full text-center uppercase tracking-wide"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />

@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,7 @@ body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
+  overflow-x: hidden;
 }
 
 /* ---- Blueprint signature system ---- */
@@ -95,22 +97,7 @@ body {
   letter-spacing: 0.08em;
 }
 
-[data-aos="drop-bounce"] {
-  opacity: 0;
-}
-
-[data-aos="drop-bounce"].aos-animate {
-  animation: dropBounce 1.2s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
-}
-
-@keyframes dropBounce {
-  0% { transform: translateY(-300px); opacity: 0; }
-  50% { transform: translateY(0); opacity: 1; }
-  65% { transform: translateY(-40px); opacity: 1; }
-  80% { transform: translateY(0); opacity: 1; }
-  90% { transform: translateY(-15px); opacity: 1; }
-  100% { transform: translateY(0); opacity: 1; }
-}
+/* ---- AOS drop-bounce animation (single definition) ---- */
 
 [data-aos="drop-bounce"] {
   opacity: 0;
@@ -127,4 +114,26 @@ body {
   80% { transform: translateY(0); opacity: 1; }
   90% { transform: translateY(-15px); opacity: 1; }
   100% { transform: translateY(0); opacity: 1; }
+}
+
+/* ---- Interactive hover effects ---- */
+
+.bp-panel {
+  transition: box-shadow 0.3s ease;
+}
+
+.bp-panel:hover {
+  box-shadow: 0 8px 30px rgba(23, 20, 13, 0.08);
+}
+
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.97);
 }
