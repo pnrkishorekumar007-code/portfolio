@@ -1,12 +1,35 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import heroVideo from '../../assets/videos/watermark-removed-a012ae45-ce73-4dee-b6ce-ff1165b538ac_1_202607121251_gwr_video_mvp (1).mp4'
 import Crosshair from '../ui/Crosshair'
 import ReadoutBar from '../ui/ReadoutBar'
 
 export default function Hero() {
   const videoRef = useRef(null)
+  const sectionRef = useRef(null)
   const [isPlaying, setIsPlaying] = useState(true)
   const [isMuted, setIsMuted] = useState(true)
+
+  useEffect(() => {
+    const video = videoRef.current
+    const section = sectionRef.current
+    if (!video || !section) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {})
+          setIsPlaying(true)
+        } else {
+          video.pause()
+          setIsPlaying(false)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
 
   const toggleVideo = (e) => {
     e.stopPropagation()
@@ -31,7 +54,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="bp-panel relative w-full h-screen overflow-hidden bg-ink">
+    <section id="home" ref={sectionRef} className="bp-panel relative w-full h-screen overflow-hidden bg-ink">
       <video
         ref={videoRef}
         autoPlay
