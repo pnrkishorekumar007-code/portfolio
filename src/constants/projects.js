@@ -4,13 +4,13 @@ export const PROJECTS = [
     title: 'Zivah Styles',
     tagline: 'Premium fashion e-commerce storefront',
     description:
-      'A full-featured fashion storefront with a product catalog, cart with coupon codes, wishlist, and a Cmd+K command-palette search. Built with a luxury design system — gold accents on warm ivory.',
-    stack: ['React 19', 'TanStack Start', 'TanStack Router', 'Tailwind CSS v4', 'shadcn/ui'],
+      'A fully functional clothing shop web application with a structured codebase split across HTML, CSS, and JavaScript modules. Built with a luxury design system — gold accents on warm ivory.',
+    stack: ['HTML5', 'CSS3', 'JavaScript'],
     features: [
       'Product catalog with filtering, sorting & search',
-      'Cart with coupon codes & free-shipping threshold',
-      'Wishlist + side-by-side product comparison',
-      'Command-palette search (Cmd+K)',
+      'Interactive UI with dynamic page behavior',
+      'Structured codebase across HTML, CSS, and JS modules',
+      'Responsive design for mobile and desktop',
     ],
     repoUrl: 'https://github.com/pnrkishorekumar007-code/zivah-styles-v',
     status: 'Deployed',

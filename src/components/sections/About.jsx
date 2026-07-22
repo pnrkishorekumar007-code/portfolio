@@ -42,7 +42,7 @@ export default function About() {
             </p>
 
             <p className="text-ink-soft text-sm md:text-base leading-relaxed max-w-2xl mb-8">
-              I specialize in building modern web applications using React, Node.js, Python, and Django.
+              I specialize in building modern web applications using HTML, CSS, Bootstrap, JavaScript, Python, and Django.
               My focus is on creating intuitive user interfaces backed by robust, scalable backend architectures.
             </p>
 

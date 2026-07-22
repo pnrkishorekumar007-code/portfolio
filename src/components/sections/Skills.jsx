@@ -1,7 +1,4 @@
 import { motion } from 'framer-motion'
-import reactImage from '../../assets/images/react.png'
-import nodeImage from '../../assets/images/node.png'
-import mongoImage from '../../assets/images/mongodb.png'
 import Crosshair from '../ui/Crosshair'
 import PanelTag from '../ui/PanelTag'
 import ReadoutBar from '../ui/ReadoutBar'
@@ -11,14 +8,22 @@ const SKILLS = [
   { id: '02', name: 'CSS3', detail: '90% Proficiency' },
   { id: '03', name: 'JavaScript', detail: '80% Proficiency' },
   { id: '04', name: 'Python', detail: 'Full Stack' },
-  { id: '05', name: 'Django', detail: 'Backend Dev' },
-  { id: '06', name: 'Bootstrap', detail: 'Responsive UI' },
+  { id: '05', name: 'SQL', detail: 'Database Mgmt' },
+  { id: '06', name: 'Django', detail: 'Backend Dev' },
+  { id: '07', name: 'Bootstrap', detail: 'Responsive UI' },
 ]
 
-const TECH_STACK = [
-  { src: reactImage, alt: 'React' },
-  { src: nodeImage, alt: 'Node.js' },
-  { src: mongoImage, alt: 'MongoDB' },
+const TOOLS = [
+  { id: '01', name: 'Git & GitHub', detail: 'Version Control' },
+  { id: '02', name: 'VS Code', detail: 'Primary Editor' },
+  { id: '03', name: 'Cursor', detail: 'AI-Powered Editor' },
+  { id: '04', name: 'Debugging & Optimization', detail: 'Core Concept' },
+]
+
+const CREATIVE_SKILLS = [
+  { id: '01', name: 'Pencil Sketching & Portrait Art' },
+  { id: '02', name: 'Professional Manga Illustration' },
+  { id: '03', name: 'Published via Thunder Boys Startup' },
 ]
 
 const containerVariants = {
@@ -29,11 +34,6 @@ const containerVariants = {
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-}
-
-const scaleUp = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: 'easeOut' } },
 }
 
 export default function Skills() {
@@ -71,47 +71,23 @@ export default function Skills() {
           </motion.p>
         </motion.div>
 
-        {/* Tech Stack Logos */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={containerVariants}
-          className="flex items-center justify-center gap-10 md:gap-16 mb-20"
-        >
-          {TECH_STACK.map(({ src, alt }) => (
-            <motion.div
-              key={alt}
-              variants={scaleUp}
-              className="w-20 h-20 md:w-28 md:h-28 bg-paper border border-ink/10 p-4 flex items-center justify-center hover:border-orange hover:shadow-[0_10px_30px_rgba(225,90,42,0.15)] transition-all duration-500 cursor-pointer"
-            >
-              <img
-                src={src}
-                alt={alt}
-                className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Skills Panel */}
+        {/* Languages & Frameworks Panel */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           variants={containerVariants}
-          className="w-full"
+          className="w-full mb-10"
         >
           <div className="border border-ink/15 bg-paper relative">
             <div className="absolute -top-3 left-4 bp-readout text-[9px] uppercase px-2 py-0.5 bg-orange text-ink border border-ink/20 z-10">
-              Proficiency Panel
+              Languages & Frameworks
             </div>
 
             <div className="p-6 md:p-10">
               <div className="bp-readout text-[10px] uppercase text-ink/50 border-b border-ink/15 pb-2 mb-4 flex justify-between">
                 <span>Command Panel</span>
-                <span>Skills — 06 Core</span>
+                <span>Skills — 07 Core</span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
@@ -131,16 +107,91 @@ export default function Skills() {
               </div>
             </div>
           </div>
-
-          <ReadoutBar
-            className="mt-8 text-ink"
-            items={[
-              { label: 'Specialty', value: 'Full-Stack' },
-              { label: 'Frontend', value: 'React / HTML / CSS' },
-              { label: 'Backend', value: 'Python / Django' },
-            ]}
-          />
         </motion.div>
+
+        {/* Tools & Platforms Panel */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          variants={containerVariants}
+          className="w-full mb-10"
+        >
+          <div className="border border-ink/15 bg-paper relative">
+            <div className="absolute -top-3 left-4 bp-readout text-[9px] uppercase px-2 py-0.5 bg-orange text-ink border border-ink/20 z-10">
+              Tools & Platforms
+            </div>
+
+            <div className="p-6 md:p-10">
+              <div className="bp-readout text-[10px] uppercase text-ink/50 border-b border-ink/15 pb-2 mb-4 flex justify-between">
+                <span>Toolchain Panel</span>
+                <span>Tools — 04 Active</span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+                {TOOLS.map(({ id, name, detail }) => (
+                  <motion.div
+                    key={name}
+                    variants={itemVariants}
+                    className="flex items-center justify-between border-b border-ink/10 py-4 group hover:bg-orange/5 transition-colors px-2 cursor-default"
+                  >
+                    <div className="flex items-baseline gap-4">
+                      <span className="bp-readout text-orange text-sm font-semibold">{id}.</span>
+                      <span className="font-semibold text-ink text-base">{name}</span>
+                    </div>
+                    <span className="bp-readout text-ink-soft text-xs uppercase">{detail}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Creative Skills Panel */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          variants={containerVariants}
+          className="w-full mb-10"
+        >
+          <div className="border border-ink/15 bg-paper relative">
+            <div className="absolute -top-3 left-4 bp-readout text-[9px] uppercase px-2 py-0.5 bg-orange text-ink border border-ink/20 z-10">
+              Creative Skills
+            </div>
+
+            <div className="p-6 md:p-10">
+              <div className="bp-readout text-[10px] uppercase text-ink/50 border-b border-ink/15 pb-2 mb-4 flex justify-between">
+                <span>Creative Panel</span>
+                <span>Skills — 03 Active</span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+                {CREATIVE_SKILLS.map(({ id, name }) => (
+                  <motion.div
+                    key={name}
+                    variants={itemVariants}
+                    className="flex items-center justify-between border-b border-ink/10 py-4 group hover:bg-orange/5 transition-colors px-2 cursor-default"
+                  >
+                    <div className="flex items-baseline gap-4">
+                      <span className="bp-readout text-orange text-sm font-semibold">{id}.</span>
+                      <span className="font-semibold text-ink text-base">{name}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <ReadoutBar
+          className="mt-8 text-ink"
+          items={[
+            { label: 'Specialty', value: 'Full-Stack' },
+            { label: 'Frontend', value: 'HTML / CSS / JS' },
+            { label: 'Backend', value: 'Python / Django' },
+          ]}
+        />
       </div>
     </section>
   )

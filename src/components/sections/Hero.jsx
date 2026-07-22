@@ -175,7 +175,7 @@ export default function Hero() {
             className="text-paper"
             items={[
               { label: 'Role', value: 'Full-Stack Dev' },
-              { label: 'Stack', value: 'React / Django' },
+              { label: 'Stack', value: 'Python / Django' },
               { label: 'Status', value: 'Available' },
               { label: 'Based', value: 'Chennai, IN' },
             ]}
