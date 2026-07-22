@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full font-medium uppercase">
         <div className="flex flex-col gap-1">
           <p>Full Stack Web Development</p>
-          <p>React, Node.js, Django</p>
-          <p>Python &amp; JavaScript</p>
+          <p>HTML, CSS, Bootstrap</p>
+          <p>Python, Django &amp; JavaScript</p>
         </div>
 
         <div className="flex flex-col gap-1 md:items-center">

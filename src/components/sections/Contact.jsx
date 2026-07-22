@@ -31,9 +31,8 @@ export default function Contact() {
 
     const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-    window.location.href = mailtoUrl
     setStatus('opened')
-    form.reset()
+    window.location.href = mailtoUrl
   }
 
   return (

@@ -65,9 +65,7 @@ export default function TagCard({
         </span>
 
         <h3
-          className={`font-display text-2xl uppercase mb-3 tracking-tight transition-colors duration-700 ${
-            isActive ? 'text-ink' : 'text-ink'
-          }`}
+          className="font-display text-2xl uppercase mb-3 tracking-tight text-ink"
         >
           {title}
         </h3>

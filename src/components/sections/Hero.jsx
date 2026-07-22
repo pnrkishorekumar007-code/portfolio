@@ -6,7 +6,7 @@ import ReadoutBar from '../ui/ReadoutBar'
 export default function Hero() {
   const videoRef = useRef(null)
   const sectionRef = useRef(null)
-  const [isPlaying, setIsPlaying] = useState(true)
+  const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
 
   useEffect(() => {

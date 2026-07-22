@@ -2,21 +2,12 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-float: float 6s ease-in-out infinite;
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-  }
-
   --color-paper: #efe8d8;
   --color-paper-2: #e4dac2;
   --color-ink: #17140d;
   --color-ink-soft: #55503f;
   --color-orange: #e15a2a;
   --color-orange-deep: #a63f1a;
-  --color-line: #17140d26;
-
   --font-display: 'Anton', sans-serif;
   --font-mono-bp: 'JetBrains Mono', monospace;
   --font-body: 'Space Grotesk', sans-serif;
